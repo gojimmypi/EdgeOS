@@ -1,0 +1,620 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.03.13 09:38:04 =~=~=~=~=~=~=~=~=~=~=~=
+
+  _____    _            
+ | ____|__| | __ _  ___          (c) 2010-2020
+ |  _| / _  |/ _  |/ _          Ubiquiti Networks, Inc.
+ | |__| (_| | (_| |  __/         
+ |_______._|__. |___|         https://www.ubnt.com
+             |___/
+
+Welcome to EdgeOS EdgeRouter-X-5-Port ttyS1
+
+By logging in, accessing, or using the Ubiquiti product, you
+acknowledge that you have read and understood the Ubiquiti
+License Agreement (available in the Web UI at, by default,
+http://192.168.1.1) and agree to be bound by its terms.
+
+EdgeRouter-X-5-Port login:          Stopping Network Time Service...
+[[0;32m  OK  [0m] Removed slice system-getty.slice.
+[[0;32m  OK  [0m] Stopped target Multi-User System.
+         Stopping System Logging Service...
+         Stopping Regular background program processing daemon...
+         Stopping D-Bus System Message Bus...
+         Stopping Login Service...
+         Stopping Lighttpd Daemon...
+         Stopping OpenBSD Secure Shell server...
+         Stopping Netplug Services...
+[[0;32m  OK  [0m] Stopped target Timers.
+                Stopping Serial Getty on ttyS1...
+[[0;32m  OK  [0m] Stopped Deferred execution scheduler.
+[[0;32m  OK  [0m] Stopped Login Service.
+[[0;32m  OK  [0m] Stopped Regular background program processing daemon.
+[[0;32m  OK  [0m] Stopped D-Bus System Message Bus.
+[[0;32m  OK  [0m] Stopped System Logging Service.
+[[0;32m  OK  [0m] Stopped Network Time Service.
+[[0;32m  OK  [0m] Stopped GUI Telnet Daemon.
+[[0;32m  OK  [0m] Stopped Lighttpd Daemon.
+[[0;32m  OK  [0m] Stopped OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Stopped Serial Getty on ttyS1.
+[[0;32m  OK  [0m] Stopped Netplug Services.
+[[0;32m  OK  [0m] Stopped /etc/rc.local Compatibility.
+         Stopping Permit User Sessions...
+[[0;32m  OK  [0m] Removed slice system-serial\x2dgetty.slice.
+         Stopping UBNT Routing Daemons...
+[[0;32m  OK  [0m] Stopped Permit User Sessions.
+[[0;32m  OK  [0m] Stopped target Network.
+         Stopping Raise network interfaces...
+[[0;32m  OK  [0m] Stopped target Remote File Systems.
+[[0;32m  OK  [0m] Stopped Raise network interfaces.
+[[0;32m  OK  [0m] Stopped UBNT Routing Daemons.
+         Stopping EdgeOS RIB daemon...
+[[0;32m  OK  [0m] Stopped EdgeOS RIB daemon.
+         Stopping EdgeOS NSM daemon...
+[[0;32m  OK  [0m] Stopped EdgeOS NSM daemon.
+         Stopping EdgeOS IMI manager...
+[[0;32m  OK  [0m] Stopped EdgeOS IMI manager.
+         Stopping UBNT daemon...
+[[0;32m  OK  [0m] Stopped UBNT daemon.
+[[0;32m  OK  [0m] Stopped target Basic System.
+[[0;32m  OK  [0m] Stopped target Paths.
+[[0;32m  OK  [0m] Stopped target Slices.
+[[0;32m  OK  [0m] Removed slice User and Session Slice.
+[[0;32m  OK  [0m] Stopped target Sockets.
+[[0;32m  OK  [0m] Closed UUID daemon activation socket.
+[[0;32m  OK  [0m] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Closed D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Closed Syslog Socket.
+[[0;32m  OK  [0m] Stopped target Network (Pre).
+[[0;32m  OK  [0m] Stopped target System Initialization.
+[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
+[[0;32m  OK  [0m] Stopped target Encrypted Volumes.
+[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
+         Stopping Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Stopped Load Kernel Modules.
+         Stopping Load/Save Random Seed...
+[[0;32m  OK  [0m] Stopped target Swap.
+[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
+[[0;32m  OK  [0m] Stopped Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Stopped target Local File Systems.
+         Unmounting /root.dev...
+         Unmounting /run/shm...
+         Unmounting /tmp...
+         Unmounting /opt/vyatta/config/tmp/n…ae3e454500546638f73232816de0eb7...
+         Unmounting /lib/init/rw...
+[[0;32m  OK  [0m] Stopped Flush Journal to Persistent Storage.
+         Unmounting /var/log...
+[[0;1;31mFAILED[0m] Failed unmounting /root.dev.
+[[0;32m  OK  [0m] Unmounted /run/shm.
+[[0;32m  OK  [0m] Unmounted /tmp.
+[[0;32m  OK  [0m] Unmounted /opt/vyatta/config/tmp/ne…_fae3e454500546638f73232816de0eb7.
+[[0;32m  OK  [0m] Unmounted /lib/init/rw.
+[[0;32m  OK  [0m] Unmounted /var/log.
+         Unmounting /opt/vyatta/config...
+[[0;32m  OK  [0m] Unmounted /opt/vyatta/config.
+[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
+[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
+[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Reached target Shutdown.
+reboot: Restarting system
+
+===================================================================
+     		MT7621   stage1 code 10:33:11 (ASIC)
+     		CPU=50000000 HZ BUS=16666666 HZ
+==================================================================
+Change MPLL source from XTAL to CR...
+do MEMPLL setting..
+MEMPLL Config : 0x11100000
+3PLL mode + External loopback
+=== XTAL-40Mhz === DDR-1200Mhz ===
+PLL3 FB_DL: 0x12, 1/0 = 657/367 49000000
+PLL4 FB_DL: 0x13, 1/0 = 594/430 4D000000
+PLL2 FB_DL: 0x16, 1/0 = 736/288 59000000
+do DDR setting..[00320381]
+Apply DDR3 Setting...(use customer AC)
+          0    8   16   24   32   40   48   56   64   72   80   88   96  104  112  120
+      --------------------------------------------------------------------------------
+0000:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0001:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0002:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0003:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0004:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0005:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0006:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0007:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0008:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0009:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1    1
+000E:|    0    0    0    0    0    0    0    0    0    1    1    1    1    1    1    1
+000F:|    0    0    0    0    1    1    1    1    1    1    1    1    1    0    0    0
+0010:|    1    1    1    1    1    1    1    1    0    0    0    0    0    0    0    0
+0011:|    1    1    1    1    0    0    0    0    0    0    0    0    0    0    0    0
+0012:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0013:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0014:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0015:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0016:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0017:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0018:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0019:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001E:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001F:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+rank 0 coarse = 15
+rank 0 fine = 64
+B:|    0    0    0    0    0    0    0    1    1    1    0    0    0    0    0    0
+opt_dle value:8
+DRAMC_R0DELDLY[018]=00001C1C
+==================================================================
+		RX	DQS perbit delay software calibration 
+==================================================================
+1.0-15 bit dq delay value
+==================================================================
+bit|     0  1  2  3  4  5  6  7  8  9
+--------------------------------------
+0 |    10 7 11 9 11 6 12 6 7 9 
+10 |    9 11 7 11 7 10 
+--------------------------------------
+
+==================================================================
+2.dqs window
+x=pass dqs delay value (min~max)center 
+y=0-7bit DQ of every group
+input delay:DQS0 =28 DQS1 = 28
+==================================================================
+bit	DQS0	 bit      DQS1
+0  (1~53)27  8  (1~52)26
+1  (1~50)25  9  (2~52)27
+2  (1~53)27  10  (1~55)28
+3  (1~54)27  11  (1~54)27
+4  (2~55)28  12  (1~53)27
+5  (1~51)26  13  (1~53)27
+6  (1~54)27  14  (1~55)28
+7  (1~52)26  15  (1~55)28
+==================================================================
+3.dq delay value last
+==================================================================
+bit|    0  1  2  3  4  5  6  7  8   9
+--------------------------------------
+0 |    11 10 12 10 11 8 13 8 9 10 
+10 |    9 12 8 12 7 10 
+==================================================================
+==================================================================
+     TX  perbyte calibration 
+==================================================================
+DQS loop = 15, cmp_err_1 = ffff0000 
+dqs_perbyte_dly.last_dqsdly_pass[0]=15,  finish count=1 
+dqs_perbyte_dly.last_dqsdly_pass[1]=15,  finish count=2 
+DQ loop=15, cmp_err_1 = ffff00aa
+dqs_perbyte_dly.last_dqdly_pass[1]=15,  finish count=1 
+DQ loop=14, cmp_err_1 = ffff00aa
+DQ loop=13, cmp_err_1 = ffff00a2
+DQ loop=12, cmp_err_1 = ffff0080
+DQ loop=11, cmp_err_1 = ffff0080
+DQ loop=10, cmp_err_1 = ffff0000
+dqs_perbyte_dly.last_dqdly_pass[0]=10,  finish count=2 
+byte:0, (DQS,DQ)=(a,8)
+byte:1, (DQS,DQ)=(8,8)
+20,data:8a
+[EMI] DRAMC calibration passed
+
+===================================================================
+     		MT7621   stage1 code done 
+     		CPU=50000000 HZ BUS=16666666 HZ
+===================================================================
+
+
+U-Boot 1.1.3 (UBNT Build Version: e50_002_4c817) (May 27 2019 - 06:37:33)
+
+Board: Ralink APSoC DRAM:  256 MB
+relocate_code Pointer at: 8ffac000
+
+Config XHCI 40M PLL 
+******************************
+Software System Reset Occurred
+******************************
+Allocate 16 byte aligned buffer: 8ffe1780
+Enable NFI Clock
+# MTK NAND # : Use HW ECC
+NAND ID [C2 DA 90 95 06]
+Device found in MTK table, ID: c2da, EXT_ID: 909506
+Support this Device in MTK table! c2da 
+select_chip
+[NAND]select ecc bit:4, sparesize :64 spare_per_sector=16
+Signature matched and data read!
+load_fact_bbt success 2047
+load fact bbt success
+[mtk_nand] probe successfully!
+mtd->writesize=2048 mtd->oobsize=64,	mtd->erasesize=131072  devinfo.iowidth=8
+..
+UBNT e50 13-02079-22 7483C24C32E2
+UBNT BD type=e50, mac=7483C24C32E2, s/n=7483C24C32E2, mrev=22, k_idx=1
+============================================ 
+Ralink UBoot Version: 4.3.S.0
+-------------------------------------------- 
+ASIC MT7621A DualCore (MAC to MT7530 Mode)
+DRAM_CONF_FROM: Auto-Detection 
+DRAM_TYPE: DDR3 
+DRAM bus: 16 bit
+Xtal Mode=3 OCP Ratio=1/3
+Flash component: NAND Flash
+Date:May 27 2019  Time:06:37:33
+============================================ 
+icache: sets:256, ways:4, linesz:32 ,total:32768
+dcache: sets:256, ways:4, linesz:32 ,total:32768 
+
+ ##### The CPU freq = 880 MHZ #### 
+ estimate memory size =256 Mbytes
+#Reset_MT7530
+Enable port 0
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   2: Load system code then write to Flash via TFTP. 
+   3: Boot system code via Flash (default).
+   4: Entr boot command line interface.
+   7: Load Boot Loader code then write to Flash via Serial. 
+   9: Load Boot Loader code then write to Flash via TFTP. 
+   r: Start TFTP recovery. 
+default: 3
+ 0 
+   
+3: System Boot system code via Flash.
+## Booting image at c0040000 ...
+   Image Name:   Linux Kernel Image
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    2139426 Bytes =  2 MB
+   Load Address: 81001000
+   Entry Point:  814b5730
+.................................   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+No initrd
+## Transferring control to Linux (at address 814b5730) ...
+## Giving linux memsize in MB, 256
+
+Starting kernel ...
+
+Linux version 4.14.54-UBNT (ubnt@4f9e0d2e77a7) (gcc version 6.3.0 20170516 (Debian 6.3.0-18)) #1 SMP Fri Jan 22 10:21:07 UTC 2021
+SoC Type: MediaTek MT7621 ver:1 eco:3
+bootconsole [early0] enabled
+CPU0 revision is: 0001992f (MIPS 1004Kc)
+MIPS: machine is Ubiquiti EdgeRouter
+Determined physical RAM map:
+ memory: 10000000 @ 00000000 (usable)
+VPE topology {2,2} total 4
+Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+Zone ranges:
+  DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+  Normal   [mem 0x0000000001000000-0x000000000fffffff]
+  HighMem  empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000000000000-0x000000000fffffff]
+Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+percpu: Embedded 15 pages/cpu @819a9000 s31376 r8192 d21872 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 65024
+Kernel command line:  console=ttyS1,57600n8 ubi.mtd=7 root=ubi0_0 rootfstype=ubifs rootsqimg=squashfs.img rootsqwdir=w rw model=e50
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Writing ErrCtl register=00037800
+Readback ErrCtl register=00037800
+Memory: 251792K/262144K available (4843K kernel code, 268K rwdata, 964K rodata, 1400K init, 278K bss, 10352K reserved, 0K cma-reserved, 0K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS: 256
+clocksource: GIC: mask: 0xffffffffffffffff max_cycles: 0xcaf478abb4, max_idle_ns: 440795247997 ns
+clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 4343773742 ns
+sched_clock: 32 bits at 440MHz, resolution 2ns, wraps every 4880645118ns
+Calibrating delay loop... 583.68 BogoMIPS (lpj=1167360)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+CPU1 revision is: 0001992f (MIPS 1004Kc)
+Synchronize counters for CPU 1: done.
+Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+CPU2 revision is: 0001992f (MIPS 1004Kc)
+Synchronize counters for CPU 2: done.
+Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+CPU3 revision is: 0001992f (MIPS 1004Kc)
+Synchronize counters for CPU 3: done.
+smp: Brought up 1 node, 4 CPUs
+devtmpfs: initialized
+random: get_random_u32 called from bucket_table_alloc+0x278/0x31c with crng_init=0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+mt7621_gpio 1e000600.gpio: registering 32 gpios
+mt7621_gpio 1e000600.gpio: registering 32 gpios
+mt7621_gpio 1e000600.gpio: registering 32 gpios
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c-mt7621 1e000900.i2c: clock 100KHz, re-start not support
+clocksource: Switched to clocksource GIC
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+4 CPUs re-calibrate udelay(lpj = 1163264)
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+io scheduler noop registered
+io scheduler cfq registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+console [ttyS1] disabled
+1e000c00.uartlite: ttyS1 at MMIO 0x1e000c00 (irq = 17, base_baud = 3125000) is a 16550A
+console [ttyS1] enabled
+console [ttyS1] enabled
+bootconsole [early0] disabled
+bootconsole [early0] disabled
+loop: module loaded
+MediaTek Nand driver init, version v2.1 Fix AHB virt2phys error
+Enable NFI Clock
+# MTK NAND # : Use HW ECC
+Device not found, ID: c2da
+Not Support this Device! 
+chip_mode=00000001
+Support this Device in MTK table! c2da 
+[NAND]select ecc bit:4, sparesize :64 spare_per_sector=16
+nand: device found, Manufacturer ID: 0xc2, Chip ID: 0xda
+nand: Macronix NAND 256MiB 3,3V 8-bit
+nand: 256 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+Scanning device for bad blocks
+Bad eraseblock 1012 at 0x000007e80000
+8 fixed-partitions partitions found on MTD device MT7621-NAND
+Creating 8 MTD partitions on "MT7621-NAND":
+0x000000000000-0x000010000000 : "ALL"
+0x000000000000-0x000010000000 : "ALL"
+0x000000000000-0x000000080000 : "Bootloader"
+0x000000080000-0x0000000e0000 : "Config"
+0x0000000e0000-0x000000140000 : "eeprom"
+0x000000140000-0x000000440000 : "Kernel1"
+0x000000440000-0x000000740000 : "Kernel2"
+0x000000740000-0x00000ff00000 : "RootFS"
+[mtk_nand] probe successfully!
+Signature matched and data read!
+load_fact_bbt success 2047
+Read UBNT BD OK!
+UBNT BD mac 7483c24c32e2 kidx 1 mrev 22 serial 7483C24C32E2 type e50
+  Device type: e50
+  dtb overlay offset: 0
+mtk_nand_load_dtb_overlay: unflattened OK
+mtk_nand_load_dtb_overlay: resolved OK
+libphy: Fixed MDIO Bus: probed
+MT7530 Reset Completed!!
+change HW-TRAP to 0x117c8f
+libphy: mdio: probed
+mtk_soc_eth 1e100000.ethernet: loaded mt7530 driver
+mtk_soc_eth 1e100000.ethernet itf0: mediatek frame engine at 0xbe100000, irq 18
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-platform: EHCI generic platform driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform: OHCI generic platform driver
+usbcore: registered new interface driver usb-storage
+Initializing XFRM netlink socket
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+random: fast init done
+ubi0: attaching mtd7
+ubi0: scanning is finished
+ubi0: attached mtd7 (name "RootFS", size 247 MiB)
+ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+ubi0: good PEBs: 1981, bad PEBs: 1, corrupted PEBs: 0
+ubi0: user volume: 1, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 3/1, WL threshold: 4096, image sequence number: 1912919849
+ubi0: available PEBs: 0, total reserved PEBs: 1981, PEBs reserved for bad PEB handling: 39
+ubi0: background thread "ubi_bgt0d" started, PID 69
+do_mount_squash_image: started
+do_mount_squash_image: mkdir /root.dev
+do_mount_squash_image: sys_mount ubi0_0 /root.dev ubifs
+UBIFS (ubi0:0): background thread "ubifs_bgt0_0" started, PID 70
+UBIFS (ubi0:0): recovery needed
+UBIFS (ubi0:0): recovery completed
+UBIFS (ubi0:0): UBIFS: mounted UBI device 0, volume 0, name "troot"
+UBIFS (ubi0:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS (ubi0:0): FS size: 244428800 bytes (233 MiB, 1925 LEBs), journal size 12189696 bytes (11 MiB, 96 LEBs)
+UBIFS (ubi0:0): reserved for root: 4952683 bytes (4836 KiB)
+UBIFS (ubi0:0): media format: w4/r0 (latest is w5/r0), UUID B4B9B281-EC74-4C79-8C43-C7B2B33E6D04, small LPT model
+UBIFS (ubi0:0): full atime support is enabled.
+do_mount_squash_image: Mounting squashfs image /dev/loop_root to /root.loop
+do_mount_squash_image: mounting overlay fs to /root with params upperdir=/root.dev/w,lowerdir=/root.loop,workdir=/root.dev/work
+VFS: Mounted root (overlay filesystem) on device 0:13.
+devtmpfs: mounted
+Freeing unused kernel memory: 1400K
+This architecture does not have kernel memory protection.
+ESW: Link Status Changed - Port0 Link UP
+gsw_interrupt_mt7621: dev(link-up) = NULL
+systemd[1]: System time before build time, advancing clock.
+NET: Registered protocol family 10
+Segment Routing with IPv6
+ip_tables: (C) 2000-2006 Netfilter Core Team
+random: systemd: uninitialized urandom read (16 bytes read)
+systemd[1]: systemd 232 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+systemd[1]: Detected architecture mips.
+
+Welcome to [1mDebian GNU/Linux 9 (stretch)[0m!
+
+systemd[1]: Set hostname to <ubnt>.
+random: systemd: uninitialized urandom read (16 bytes read)
+random: systemd-cryptse: uninitialized urandom read (16 bytes read)
+random: systemd: uninitialized urandom read (16 bytes read)
+random: systemd: uninitialized urandom read (16 bytes read)
+random: systemd: uninitialized urandom read (16 bytes read)
+systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
+systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on Journal Socket.
+systemd[1]: Reached target Swap.
+[[0;32m  OK  [0m] Reached target Swap.
+systemd[1]: Reached target Remote File Systems.
+[[0;32m  OK  [0m] Reached target Remote File Systems.
+systemd[1]: Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice User and Session Slice.
+[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Reached target Paths.
+[[0;32m  OK  [0m] Reached target Encrypted Volumes.
+[[0;32m  OK  [0m] Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Created slice System Slice.
+         Starting Create list of required st…ce nodes for the current kernel...
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+         Mounting POSIX Message Queue File System...
+         Starting Remount Root and Kernel File Systems...
+         Starting Load Kernel Modules...
+         Starting Journal Service...
+[[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Reached target Slices.
+[[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
+[[0;32m  OK  [0m] Started Create list of required sta…vice nodes for the current kernel.
+[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Started Journal Service.
+ubnt_platform: loading out-of-tree module taints kernel.
+ubnt_platform: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+         Starting Load/Save Random Seed...
+         Starting udev Coldplug all Devices...
+         Starting Create Static Device Nodes in /dev...
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
+[[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
+         Mounting /run/shm...
+         Mounting /tmp...
+         Mounting /var/log...
+         Mounting /lib/init/rw...
+         Starting udev Kernel Device Manager...
+[[0;32m  OK  [0m] Mounted /var/log.
+[[0;32m  OK  [0m] Mounted /run/shm.
+[[0;32m  OK  [0m] Mounted /tmp.
+[[0;32m  OK  [0m] Mounted /lib/init/rw.
+         Starting Flush Journal to Persistent Storage...
+[[0;32m  OK  [0m] Reached target Local File Systems.
+[[0;32m  OK  [0m] Started udev Coldplug all Devices.
+systemd-journald[97]: Received request to flush runtime journal from PID 1
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[[0;32m  OK  [0m] Started udev Kernel Device Manager.
+[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+Registering char device flash0 (200) succeeds
+[[0;32m  OK  [0m] Found device /dev/ttyS1.
+[[0;32m  OK  [0m] Started Load Kernel Modules.
+         Starting Apply Kernel Variables...
+[[0;32m  OK  [0m] Started Apply Kernel Variables.
+[[0;32m  OK  [0m] Reached target System Initialization.
+[[0;32m  OK  [0m] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Reached target Sockets.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Reached target Basic System.
+         Starting System Logging Service...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+[[0;32m  OK  [0m] Started Deferred execution scheduler.
+         Starting Login Service...
+         Starting Create vyatta file system....
+[[0;32m  OK  [0m] Started System Logging Service.
+[[0;32m  OK  [0m] Started Login Service.
+[[0m[0;31m*     [0m] A start job is running for Create vyatta file system. (9s / no limit)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Create vyatta file system. (10s / no limit)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Create vyatta file system. (11s / no limit)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Create vyatta file system. (11s / no limit)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Create vyatta file system. (12s / no limit)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Create vyatta file system. (12s / no limit)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Create vyatta file system. (13s / no limit)[K[     [0;31m*[0m] A start job is running for Create vyatta file system. (14s / no limit)[K[[0;32m  OK  [0m] Started Create vyatta file system..
+         Starting Load the configuration of features which need reboot...
+[[0;32m  OK  [0m] Started Load the configuration of features which need reboot.
+[[0;32m  OK  [0m] Reached target Network (Pre).
+         Starting Vyatta PPPoE...
+         Starting Raise network interfaces...
+[[0;32m  OK  [0m] Started Vyatta PPPoE.
+         Starting UBNT daemon...
+[[0;32m  OK  [0m] Started Raise network interfaces.
+[[0;32m  OK  [0m] Started UBNT daemon.
+         Starting EdgeOS IMI manager...
+[[0;32m  OK  [0m] Started EdgeOS IMI manager.
+         Starting EdgeOS NSM daemon...
+[    [0;31m*[0;1;31m*[0m] A start job is running for EdgeOS NSM daemon (23s / 1min 49s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for EdgeOS NSM daemon (24s / 1min 49s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for EdgeOS NSM daemon (24s / 1min 49s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for EdgeOS NSM daemon (25s / 1min 49s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for EdgeOS NSM daemon (26s / 1min 49s)[K[[0;32m  OK  [0m] Started EdgeOS NSM daemon.
+         Starting EdgeOS RIB daemon...
+[[0;32m  OK  [0m] Started EdgeOS RIB daemon.
+         Starting UBNT Routing Daemons...
+[[0;32m  OK  [0m] Reached target Network.
+         Starting /etc/rc.local Compatibility...
+         Starting Permit User Sessions...
+[[0;32m  OK  [0m] Started /etc/rc.local Compatibility.
+[[0;32m  OK  [0m] Started Permit User Sessions.
+[[0;1;31m*[0m[0;31m*    [0m] A start job is running for UBNT Routing Daemons (32s / no limit)[K[[0m[0;31m*     [0m] A start job is running for UBNT Routing Daemons (33s / no limit)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for UBNT Routing Daemons (34s / no limit)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for UBNT Routing Daemons (34s / no limit)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for UBNT Routing Daemons (34s / no limit)[K         Stopping System Logging Service...
+[[0;32m  OK  [0m] Stopped System Logging Service.
+         Starting System Logging Service...
+[[0;32m  OK  [0m] Started System Logging Service.
+         Stopping System Logging Service...
+[[0;32m  OK  [0m] Stopped System Logging Service.
+         Starting System Logging Service...
+[[0;32m  OK  [0m] Started System Logging Service.
+[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for UBNT Routing Daemons (41s / no limit)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for UBNT Routing Daemons (41s / no limit)[K[    [0;31m*[0;1;31m*[0m] A start job is running for UBNT Routing Daemons (42s / no limit)[K[     [0;31m*[0m] A start job is running for UBNT Routing Daemons (43s / no limit)[K[    [0;31m*[0;1;31m*[0m] A start job is running for UBNT Routing Daemons (43s / no limit)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for UBNT Routing Daemons (44s / no limit)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for UBNT Routing Daemons (44s / no limit)[K         Starting Network Time Service...
+[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] (1 of 2) A start job is running for…rk Time Service (185ms / 1min 30s)[K[[0;32m  OK  [0m] Started Network Time Service.
+         Starting GUI Telnet Daemon...
+[[0;32m  OK  [0m] Started GUI Telnet Daemon.
+         Starting Lighttpd Daemon...
+[[0;32m  OK  [0m] Started Lighttpd Daemon.
+[[0;32m  OK  [0m] Started UBNT Routing Daemons.
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+         Starting Start ubnt feature daemons...
+[[0;32m  OK  [0m] Started Serial Getty on ttyS1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+         Starting Netplug Services...
+[[0;32m  OK  [0m] Started Start ubnt feature daemons.
+[[0;32m  OK  [0m] Started Netplug Services.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+         Starting Update UTMP about System Runlevel Changes...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+
+  _____    _            
+ | ____|__| | __ _  ___          (c) 2010-2020
+ |  _| / _  |/ _  |/ _          Ubiquiti Networks, Inc.
+ | |__| (_| | (_| |  __/         
+ |_______._|__. |___|         https://www.ubnt.com
+             |___/
+
+Welcome to EdgeOS EdgeRouter-X-5-Port ttyS1
+
+By logging in, accessing, or using the Ubiquiti product, you
+acknowledge that you have read and understood the Ubiquiti
+License Agreement (available in the Web UI at, by default,
+http://192.168.1.1) and agree to be bound by its terms.
+
+EdgeRouter-X-5-Port login: 
