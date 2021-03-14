@@ -1,26 +1,5 @@
-=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.03.13 19:37:27 =~=~=~=~=~=~=~=~=~=~=~=
-logout
-
-  _____    _            
- | ____|__| | __ _  ___          (c) 2010-2020
- |  _| / _  |/ _  |/ _          Ubiquiti Networks, Inc.
- | |__| (_| | (_| |  __/         
- |_______._|__. |___|         https://www.ubnt.com
-             |___/
-
-Welcome to EdgeOS EdgeRouter-X-5-Port ttyS1
-
-By logging in, accessing, or using the Ubiquiti product, you
-acknowledge that you have read and understood the Ubiquiti
-License Agreement (available in the Web UI at, by default,
-http://192.168.1.1) and agree to be bound by its terms.
-
-EdgeRouter-X-5-Port login: ubnt
-Password: 
-Last login: Thu Jan  1 16:41:54 UTC 2015 on ttyS1
-Linux EdgeRouter-X-5-Port 4.14.54-UBNT #1 SMP Fri Jan 22 10:21:07 UTC 2021 mips
-Welcome to EdgeOS
-ubnt@EdgeRouter-X-5-Port:~$ cli-shell-api --show-commands --show-cfg1 /dev/null  --show-cfg2 /config/config.boot showConfig
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.03.13 20:03:46 =~=~=~=~=~=~=~=~=~=~=~=
+cd    cli-shell-api --show-commands --show-cfg1 /dev//null --show-cfg2 /config/config.boot showConfig
 set firewall all-ping enable
 set firewall broadcast-ping disable
 set firewall group network-group PRIVATE_NETS network 192.168.0.0/16
@@ -30,6 +9,10 @@ set firewall ipv6-receive-redirects disable
 set firewall ipv6-src-route disable
 set firewall ip-src-route disable
 set firewall log-martians disable
+set firewall modify SOURCE_ROUTE rule 10 action modify
+set firewall modify SOURCE_ROUTE rule 10 description 'traffic from 192.168.170.0/24 to vtun0'
+set firewall modify SOURCE_ROUTE rule 10 modify table 1
+set firewall modify SOURCE_ROUTE rule 10 source address 192.168.170.0/24
 set firewall modify balance rule 10 action modify
 set firewall modify balance rule 10 description 'do NOT load balance lan to lan'
 set firewall modify balance rule 10 destination group network-group PRIVATE_NETS
@@ -79,21 +62,34 @@ set interfaces ethernet eth1 firewall in name WAN_IN
 set interfaces ethernet eth1 firewall local name WAN_LOCAL
 set interfaces ethernet eth1 speed auto
 set interfaces ethernet eth2 duplex auto
+set interfaces ethernet eth2 firewall in modify SOURCE_ROUTE
 set interfaces ethernet eth2 speed auto
 set interfaces ethernet eth3 duplex auto
+set interfaces ethernet eth3 firewall in modify SOURCE_ROUTE
 set interfaces ethernet eth3 speed auto
 set interfaces ethernet eth4 duplex auto
+set interfaces ethernet eth4 firewall in modify SOURCE_ROUTE
 set interfaces ethernet eth4 poe output off
 set interfaces ethernet eth4 speed auto
 set interfaces loopback lo
+set interfaces openvpn vtun0 config-file /config/openvpn/ca1098.nordvpn.com.udp.ovpn
+set interfaces openvpn vtun0 description 'OpenVPN VPN tunnel'
 set interfaces switch switch0 address 192.168.170.1/24
 set interfaces switch switch0 description Local
-set interfaces switch switch0 firewall in modify balance
+set interfaces switch switch0 firewall in modify SOURCE_ROUTE
+set interfaces switch switch0 mtu 1500
 set interfaces switch switch0 switch-port interface eth2
 set interfaces switch switch0 switch-port interface eth3
 set interfaces switch switch0 switch-port interface eth4
+set interfaces switch switch0 switch-port vlan-aware disable
+set load-balance group G exclude-local-dns disable
+set load-balance group G flush-on-active enable
+set load-balance group G gateway-update-interval 20
 set load-balance group G interface eth0
 set load-balance group G interface eth1
+set load-balance group G lb-local enable
+set load-balance group G lb-local-metric-change disable
+set protocols static table 1 interface-route 0.0.0.0/0 next-hop-interface vtun0
 set service dhcp-server disabled false
 set service dhcp-server hostfile-update disable
 set service dhcp-server shared-network-name LAN authoritative enable
@@ -101,15 +97,24 @@ set service dhcp-server shared-network-name LAN subnet 192.168.170.0/24 default-
 set service dhcp-server shared-network-name LAN subnet 192.168.170.0/24 dns-server 192.168.170.1
 set service dhcp-server shared-network-name LAN subnet 192.168.170.0/24 lease 86400
 set service dhcp-server shared-network-name LAN subnet 192.168.170.0/24 start 192.168.170.38 stop 192.168.170.243
+set service dhcp-server static-arp disable
+set service dhcp-server use-dnsmasq disable
 set service dns forwarding cache-size 150
 set service dns forwarding listen-on switch0
+set service gui http-port 80
 set service gui https-port 443
+set service gui older-ciphers enable
 set service nat rule 5000 description 'masquerade for WAN'
 set service nat rule 5000 outbound-interface eth0
 set service nat rule 5000 type masquerade
 set service nat rule 5002 description 'masquerade for WAN 2'
 set service nat rule 5002 outbound-interface eth1
 set service nat rule 5002 type masquerade
+set service nat rule 5100 description 'OpenVPN Clients'
+set service nat rule 5100 log disable
+set service nat rule 5100 outbound-interface vtun0
+set service nat rule 5100 source address 192.168.170.0/24
+set service nat rule 5100 type masquerade
 set service ssh port 22
 set service ssh protocol-version v2
 set service unms
@@ -131,4 +136,4 @@ set system ntp server 3.ubnt.pool.ntp.org
 set system syslog global facility all level notice
 set system syslog global facility protocols level debug
 set system time-zone UTC
-ubnt@EdgeRouter-X-5-Port:~$ 
+root@EdgeRouter-X-5-Port:/config# 

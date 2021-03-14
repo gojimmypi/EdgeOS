@@ -1,15 +1,27 @@
 firewall {
     all-ping enable
     broadcast-ping disable
-    ipv6-receive-redirects disable
-    ipv6-src-route disable
-    ip-src-route disable
-    log-martians disable
     group {
         network-group PRIVATE_NETS {
             network 192.168.0.0/16
             network 172.16.0.0/12
             network 10.0.0.0/8
+        }
+    }
+    ipv6-receive-redirects disable
+    ipv6-src-route disable
+    ip-src-route disable
+    log-martians disable
+    modify SOURCE_ROUTE {
+        rule 10 {
+            action modify
+            description "traffic from 192.168.170.0/24 to vtun0"
+            modify {
+                table 1
+            }
+            source {
+                address 192.168.170.0/24
+            }
         }
     }
     modify balance {
@@ -61,18 +73,18 @@ firewall {
         description "WAN to internal"
         rule 10 {
             action accept
+            description "Allow established/related"
             state {
                 established enable
                 related enable
             }
-            description "Allow established/related"
         }
         rule 20 {
             action drop
+            description "Drop invalid state"
             state {
                 invalid enable
             }
-            description "Drop invalid state"
         }
     }
     name WAN_LOCAL {
@@ -80,18 +92,18 @@ firewall {
         description "WAN to router"
         rule 10 {
             action accept
+            description "Allow established/related"
             state {
                 established enable
                 related enable
             }
-            description "Allow established/related"
         }
         rule 20 {
             action drop
+            description "Drop invalid state"
             state {
                 invalid enable
             }
-            description "Drop invalid state"
         }
     }
     receive-redirects disable
@@ -101,10 +113,9 @@ firewall {
 }
 interfaces {
     ethernet eth0 {
-        duplex auto
-        speed auto
-        description WAN
         address dhcp
+        description WAN
+        duplex auto
         firewall {
             in {
                 name WAN_IN
@@ -113,12 +124,12 @@ interfaces {
                 name WAN_LOCAL
             }
         }
+        speed auto
     }
     ethernet eth1 {
-        duplex auto
-        speed auto
-        description "WAN 2"
         address dhcp
+        description "WAN 2"
+        duplex auto
         firewall {
             in {
                 name WAN_IN
@@ -127,44 +138,84 @@ interfaces {
                 name WAN_LOCAL
             }
         }
+        speed auto
     }
     ethernet eth2 {
         duplex auto
+        firewall {
+            in {
+                modify SOURCE_ROUTE
+            }
+        }
         speed auto
     }
     ethernet eth3 {
         duplex auto
+        firewall {
+            in {
+                modify SOURCE_ROUTE
+            }
+        }
         speed auto
     }
     ethernet eth4 {
-        speed auto
         duplex auto
+        firewall {
+            in {
+                modify SOURCE_ROUTE
+            }
+        }
         poe {
             output off
         }
+        speed auto
     }
     loopback lo {
+    }
+    openvpn vtun0 {
+        config-file /config/openvpn/ca1098.nordvpn.com.udp.ovpn
+        description "OpenVPN VPN tunnel"
     }
     switch switch0 {
         address 192.168.170.1/24
         description Local
         firewall {
             in {
-                modify balance
+                modify SOURCE_ROUTE
             }
         }
+        mtu 1500
         switch-port {
-            interface eth2
-            interface eth3
-            interface eth4
+            interface eth2 {
+            }
+            interface eth3 {
+            }
+            interface eth4 {
+            }
+            vlan-aware disable
         }
     }
 }
 load-balance {
     group G {
+        exclude-local-dns disable
+        flush-on-active enable
+        gateway-update-interval 20
         interface eth0 {
         }
         interface eth1 {
+        }
+        lb-local enable
+        lb-local-metric-change disable
+    }
+}
+protocols {
+    static {
+        table 1 {
+            interface-route 0.0.0.0/0 {
+                next-hop-interface vtun0 {
+                }
+            }
         }
     }
 }
@@ -183,6 +234,8 @@ service {
                 }
             }
         }
+        static-arp disable
+        use-dnsmasq disable
     }
     dns {
         forwarding {
@@ -191,18 +244,29 @@ service {
         }
     }
     gui {
+        http-port 80
         https-port 443
+        older-ciphers enable
     }
     nat {
         rule 5000 {
+            description "masquerade for WAN"
             outbound-interface eth0
             type masquerade
-            description "masquerade for WAN"
         }
         rule 5002 {
+            description "masquerade for WAN 2"
             outbound-interface eth1
             type masquerade
-            description "masquerade for WAN 2"
+        }
+        rule 5100 {
+            description "OpenVPN Clients"
+            log disable
+            outbound-interface vtun0
+            source {
+                address 192.168.170.0/24
+            }
+            type masquerade
         }
     }
     ssh {
@@ -216,9 +280,6 @@ system {
     analytics-handler {
         send-analytics-report false
     }
-    crash-handler {
-        send-crash-report false
-    }
     conntrack {
         expect-table-size 4096
         hash-size 4096
@@ -229,6 +290,9 @@ system {
             max-retrans 3
         }
     }
+    crash-handler {
+        send-crash-report false
+    }
     host-name EdgeRouter-X-5-Port
     login {
         user ubnt {
@@ -238,7 +302,7 @@ system {
             level admin
         }
     }
-        ntp {
+    ntp {
         server 0.ubnt.pool.ntp.org {
         }
         server 1.ubnt.pool.ntp.org {
