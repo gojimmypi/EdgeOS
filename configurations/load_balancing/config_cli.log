@@ -1,0 +1,55 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.03.13 09:42:21 =~=~=~=~=~=~=~=~=~=~=~=
+
+  _____    _            
+ | ____|__| | __ _  ___          (c) 2010-2020
+ |  _| / _  |/ _  |/ _          Ubiquiti Networks, Inc.
+ | |__| (_| | (_| |  __/         
+ |_______._|__. |___|         https://www.ubnt.com
+             |___/
+
+Welcome to EdgeOS EdgeRouter-X-5-Port ttyS1
+
+By logging in, accessing, or using the Ubiquiti product, you
+acknowledge that you have read and understood the Ubiquiti
+License Agreement (available in the Web UI at, by default,
+http://192.168.1.1) and agree to be bound by its terms.
+
+EdgeRouter-X-5-Port login: ubnt
+Password: 
+Linux EdgeRouter-X-5-Port 4.14.54-UBNT #1 SMP Fri Jan 22 10:21:07 UTC 2021 mips
+Welcome to EdgeOS
+ubnt@EdgeRouter-X-5-Port:~$ cli-shell-api --show-commands --show-cfg1 /dev/null  --show-cfg2 /config/config.boot showConfig
+
+set interfaces ethernet eth0 address 192.168.1.1/24
+set interfaces ethernet eth0 duplex auto
+set interfaces ethernet eth0 speed auto
+set interfaces ethernet eth1 address dhcp
+set interfaces ethernet eth1 duplex auto
+set interfaces ethernet eth1 speed auto
+set interfaces ethernet eth2 duplex auto
+set interfaces ethernet eth2 speed auto
+set interfaces ethernet eth3 duplex auto
+set interfaces ethernet eth3 speed auto
+set interfaces ethernet eth4 duplex auto
+set interfaces ethernet eth4 poe output off
+set interfaces ethernet eth4 speed auto
+set interfaces loopback lo
+set interfaces switch switch0 mtu 1500
+set service gui http-port 80
+set service gui https-port 443
+set service gui older-ciphers enable
+set service ssh port 22
+set service ssh protocol-version v2
+set service unms
+set system host-name EdgeRouter-X-5-Port
+set system login user ubnt authentication encrypted-password '$1$zKNoUbAo$gomzUbYvgyUMcD436Wo66.'
+set system login user ubnt level admin
+set system ntp server 0.ubnt.pool.ntp.org
+set system ntp server 1.ubnt.pool.ntp.org
+set system ntp server 2.ubnt.pool.ntp.org
+set system ntp server 3.ubnt.pool.ntp.org
+set system syslog global facility all level notice
+set system syslog global facility protocols level debug
+set system time-zone UTC
+
+ubnt@EdgeRouter-X-5-Port:~$ 
